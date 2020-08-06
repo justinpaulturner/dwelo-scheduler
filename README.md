@@ -1,7 +1,18 @@
 # Dwelo Smart Apartment AC Scheduler Tool
 
-This program is a scheduling tool for your Dwelo AC controller. It allows you to automate the heating and cooling of your Dwelo. It is written in Python and uses a few simple libraries. 
+This program is a scheduling tool for your Dwelo AC controller. It allows you to automate the heating and cooling of your Dwelo. 
 
-Simply running the file in a terminal works. The only dependancy you will need to install is schedule. A simple 'pip install schedule' worked for me.
+### Steps: 
+- Run setup.py
+- Sign into Dwello on the browser that pops up
+- Run scheduler.py in a terminal
+- Make a login_creds.py file for added redundancy.
 
-You will need to make your own login_creds.py file. I simply had login_id() and password() return their details. 
+### Requirements:
+- Python 3.7 or above
+- Linux/Mac OS
+- Chrome installation
+- Selenium python module
+- Schedule python module
+- Chrome driver for installed Chrome version
+
