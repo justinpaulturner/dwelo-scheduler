@@ -1,0 +1,7 @@
+*.ipynb_checkpoints
+*.pkl
+__pycache__/*
+login_creds.py
+*.ipynb
+
+
