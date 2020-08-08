@@ -6,7 +6,7 @@ import time
 
 d = Dwelo()
 print("Logging in to Dwello.")
-d.launch_chrome(headless = False)
+d.launch_chrome(headless = True)
 d.load_cookies()
 print("Logged in.")
 print("Sleeping until next action")
