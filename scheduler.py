@@ -21,5 +21,5 @@ while True:
         time.sleep(1)
         d.launch_chrome()
         time.sleep(1)
-        d.login()
+        d.load_cookies()
         time.sleep()

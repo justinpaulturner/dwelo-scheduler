@@ -9,6 +9,7 @@ import subprocess
 import time
 import schedule
 import pickle
+from datetime import datetime
 
 
 class Dwelo:
@@ -128,7 +129,6 @@ class Dwelo:
 
     def current_set_temp(self): #HERE
         """Returns the cool temp that the system is already sent to"""
-        time.sleep(1)
         self.click_cool_button()
         time.sleep(1)
         set_temp_element = self.find_element("""/html/body/div[1]/div[1]/div[2]/div[3]/div[2]/div[2]/div/div/dw-thermostat-selector/div/div[1]/span""")
@@ -151,14 +151,12 @@ class Dwelo:
     def set_cool(self, desired_temp):
         """Sets the ac to the desired temp on cool."""
         self.desired_temp = desired_temp
-        time.sleep(5) # Time for the page to load
-        self.open("")
-        time.sleep(5)
+        time.sleep(1) # Time for the page to load
         self.click_cool_button() # Ensures that cool is on
         time.sleep(2.5) # Time for the set temp to change to numbers
         # Browser clicks on the up or down temp arrow until the set temp is the desired temp
         for num in range(abs(self.temp_difference())): # temp_difference function initilizes the self.set_temp variable
-            if self.set_temp < self.desired_temp: # If set temp is lower than desired
+            if self.set_temp_int < self.desired_temp: # If set temp is lower than desired
                 self.click_up_button()
             elif set_temp > desired_temp: # If set temp is lower than desired
                 self.click_down_button()
