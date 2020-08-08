@@ -15,3 +15,6 @@ This program is a scheduling tool for your Dwelo AC controller. It allows you to
 - Schedule python module
 - Chrome driver for installed Chrome version
 
+# Tips:
+- Run scheduler.py in a detached screen socket terminal to have it run in the background.
+
