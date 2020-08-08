@@ -83,10 +83,9 @@ class Dwelo:
         time.sleep(5)
         self.open("")
 
-    def find_file(self,file_name):
-        """Finds files on linux OS that have a string in their file name."""
-        command = ['locate', file_name]
-        output = subprocess.Popen(command, stdout=subprocess.PIPE).communicate()[0]
+    def find_file(self, file_name):
+        command = ['locate'+ ' ' + file_name]
+        output = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True).communicate()[0]
         output = output.decode()
         self.search_results = output.split('\n')
         return self.search_results
