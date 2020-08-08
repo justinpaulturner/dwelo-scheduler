@@ -6,7 +6,6 @@ This program is a scheduling tool for your Dwelo AC controller. It allows you to
 - Run setup.py
 - Sign into Dwello on the browser that pops up
 - Run scheduler.py in a terminal
-- Make a login_creds.py file for added redundancy.
 
 ### Requirements:
 - Python 3.7 or above
