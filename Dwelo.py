@@ -158,9 +158,9 @@ class Dwelo:
         for num in range(abs(self.temp_difference())): # temp_difference function initilizes the self.set_temp variable
             if self.set_temp_int < self.desired_temp: # If set temp is lower than desired
                 self.click_up_button()
-            elif set_temp > desired_temp: # If set temp is lower than desired
+            elif self.set_temp_int > desired_temp: # If set temp is lower than desired
                 self.click_down_button()
-            elif set_temp == desired_temp:
+            elif self.set_temp_int == desired_temp:
                 pass
         print(f"{self.current_time()} | Turned AC to {self.desired_temp}.")
         time.sleep(1)
