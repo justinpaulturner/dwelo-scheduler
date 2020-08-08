@@ -3,7 +3,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 from helper_functions import rand_sleep
-from login_creds import login_creds
 from pathlib import Path
 import subprocess
 import time
