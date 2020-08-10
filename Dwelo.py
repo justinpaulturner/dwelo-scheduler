@@ -108,11 +108,13 @@ class Dwelo:
 
     def load_cookies(self):
         """Loads cookies from the pickle cookies file. Browser needs to exist already"""
+        print("Logging in to Dwello.")
         self.open("")
         cookies = pickle.load(open(self.cookies_pkl_file_path, "rb"))
         for cookie in cookies:
             self.driver.add_cookie(cookie)
         self.open("")
+        print("Logged in.")
         
     def save_cookies(self):
         """Saves the current cookies. Use this after you log in for the first time."""
@@ -166,4 +168,13 @@ class Dwelo:
 
     def quit(self):
         self.driver.quit()
+        
+    def login_and_set_cool(self, desired_temp):
+        self.launch_chrome()
+        self.load_cookies()
+        self.set_cool(desired_temp)
+        self.quit()
+        
+    def print_update(self):
+        print(f"{self.current_time()} |  Sleeping.", end="\r", flush=True)
 
