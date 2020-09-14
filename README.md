@@ -18,3 +18,4 @@ This program is a scheduling tool for your Dwelo AC controller. It allows you to
 # Tips:
 - Run scheduler.py in a detached screen socket terminal to have it run in the background.
 
+<meta name="google-site-verification" content="FjJlkfy8CoHYHWGSVcKoKwt6S43QlWeO3BoU3AgqnjA" />
