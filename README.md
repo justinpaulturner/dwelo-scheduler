@@ -1,6 +1,6 @@
 # Dwelo Smart Apartment AC Scheduler Tool
 
-This program is a scheduling tool for your Dwelo AC controller. It allows you to automate the heating and cooling of your Dwelo. 
+This program is a scheduling tool for your Dwelo AC controller. It allows you to automate the heating, cooling and locking of your Dwelo. 
 
 ### Steps: 
 - Run setup.py
