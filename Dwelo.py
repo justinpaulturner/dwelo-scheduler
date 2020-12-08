@@ -45,6 +45,14 @@ class Dwelo:
         except NoSuchElementException:
             return False
         return True
+    
+    def exists_by_class_name(self, class_name):
+        """Returns bool on if the element given exists"""
+        try:
+            self.driver.find_element_by_class_name(class_name)
+        except NoSuchElementException:
+            return False
+        return True
 
     def open(self, url):
         url = self.base_url + url
@@ -177,4 +185,29 @@ class Dwelo:
         
     def print_update(self):
         print(f"{self.current_time()} |  Sleeping.", end="\r", flush=True)
-
+        
+    def door_is_unlocked(self):
+        """
+        Returns True if the door is unlocked else False.
+        """
+        return self.exists_by_class_name("icon-lock-unlocked-dim")
+    
+    def lock_door_if_unlocked(self):
+        """
+        Clicks on the lock door icon if the door is unlocked
+        """
+        # if door is unlocked
+        if self.door_is_unlocked():
+            # Click on locked_button
+            self.driver.find_element_by_class_name("unit-detail__lock-switch-icon").click()
+            
+    def login_and_lock_door(self):
+        """
+        Launches browser, logs in and locks the door.
+        """
+        self.launch_chrome()
+        self.load_cookies()
+        time.sleep(10)
+        self.lock_door_if_unlocked()
+        time.sleep(10)
+        self.quit()
